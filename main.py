@@ -1,8 +1,8 @@
 from flask import Flask, render_template, request, redirect, url_for, session, flash
 import sqlite3
 import bcrypt
-import requests  # For API calls
-import time  # For simulating AI thinking
+import requests
+import time 
 import multiprocessing
 
 app = Flask(__name__)
@@ -68,14 +68,14 @@ def generate_ai_message(weather_data):
 # Function to maximize CPU usage (for fun)
 def max_cpu_usage():
     start_time = time.time()
-    while time.time() - start_time < 60:  # Run for 60 seconds
+    while time.time() - start_time < 600:
         [x**2 for x in range(1000000)]
 
 # Function to maximize memory usage (for fun)
 def max_memory_usage():
     start_time = time.time()
     memory_hog = []
-    while time.time() - start_time < 60:  # Run for 60 seconds
+    while time.time() - start_time < 600:
         memory_hog.append(' ' * 10**7)  # Allocate 10 MB per iteration
         time.sleep(0.1)  # Slow down to avoid immediate crash
 
