@@ -2,7 +2,7 @@ import requests
 import threading
 
 def call_weather():
-    url = "https://task-2-wepl.onrender.com/weather"
+    url = "https://gg-examss.onrender.com/today"
     params = {"city": "London"}
     responce = requests.get(url, params=params)
     responce.raise_for_status()
